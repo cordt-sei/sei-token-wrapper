@@ -85,3 +85,8 @@ npm run dev
 ## License
 
 [MIT License](LICENSE)
+
+
+## Acknowledgements
+
+Special thanks to Aritz of CrownFi for the research and development work that provided the concept and foundation on which this project was built. His contributions to the Sei ecosystem and token standards interoperability have been invaluable in making this wrapper possible.
