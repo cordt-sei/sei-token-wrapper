@@ -41,13 +41,13 @@ else
   echo -e "${GREEN}wasm32 target already installed.${NC}"
 fi
 
-# Check for sei-cli (optional, only needed for deployment)
-echo -e "${BLUE}Checking sei-cli installation...${NC}"
-if ! command -v sei-cli &> /dev/null; then
-  echo -e "${YELLOW}sei-cli not found. This is only needed for deployment, not for development.${NC}"
+# Check for seid (optional, only needed for deployment)
+echo -e "${BLUE}Checking seid installation...${NC}"
+if ! command -v seid &> /dev/null; then
+  echo -e "${YELLOW}seid not found. This is only needed for deployment, not for development.${NC}"
   echo -e "${YELLOW}You can install it later from https://github.com/sei-protocol/sei-chain${NC}"
 else
-  echo -e "${GREEN}sei-cli is installed.${NC}"
+  echo -e "${GREEN}seid is installed.${NC}"
 fi
 
 # Check for jq
