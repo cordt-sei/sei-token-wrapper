@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QueryMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "token_info"
+      ],
+      "properties": {
+        "token_info": {
+          "type": "object",
+          "required": [
+            "denom"
+          ],
+          "properties": {
+            "denom": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "wrapped_denom"
+      ],
+      "properties": {
+        "wrapped_denom": {
+          "type": "object",
+          "required": [
+            "token_address",
+            "token_type"
+          ],
+          "properties": {
+            "token_address": {
+              "type": "string"
+            },
+            "token_type": {
+              "$ref": "#/definitions/TokenType"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "list_wrapped_tokens"
+      ],
+      "properties": {
+        "list_wrapped_tokens": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "start_after": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "TokenType": {
+      "type": "string",
+      "enum": [
+        "e_r_c20",
+        "c_w20"
+      ]
+    }
+  }
+}

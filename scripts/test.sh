@@ -11,11 +11,11 @@ fi
 echo "Running unit tests..."
 cargo test --workspace
 
-# Build the contract
+# Build the contract in library mode
 echo "Building the contract..."
-(cd contracts/token-wrapper && cargo wasm)
+(cd contracts/token-wrapper && cargo wasm --lib)
 
-# Generate the schema
+# Generate the schema (only on native target, not wasm)
 echo "Generating schema..."
 (cd contracts/token-wrapper && cargo schema)
 

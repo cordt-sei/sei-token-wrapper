@@ -12,7 +12,7 @@ A unified token wrapper for Sei blockchain that enables wrapping and unwrapping 
 
 ## Project Structure
 
-```
+```sh
 sei-token-wrapper/
 ├── contracts/       # Smart contract code
 ├── frontend/        # Web interface
@@ -69,6 +69,7 @@ The contract can be deployed to the Sei testnet (atlantic-2) using the provided 
 ## Frontend
 
 The frontend provides a user interface for:
+
 - Connecting to Sei wallet
 - Wrapping tokens (ERC20 or CW20)
 - Unwrapping tokens
@@ -85,7 +86,6 @@ npm run dev
 ## License
 
 [MIT License](LICENSE)
-
 
 ## Acknowledgements
 
